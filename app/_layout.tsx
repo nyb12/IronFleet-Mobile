@@ -6,7 +6,7 @@ export default function RootLayout() {
 
   return (
     // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-    <Stack>
+    <Stack initialRouteName="webview/webview">
       <Stack.Screen name="webview/webview" options={{ headerShown: false }} />
     </Stack>
     // </ThemeProvider>
