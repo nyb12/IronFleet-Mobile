@@ -45,7 +45,8 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow IronFleet to access your location."
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true

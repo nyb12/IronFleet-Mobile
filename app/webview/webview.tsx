@@ -33,14 +33,13 @@ function Webview(): React.JSX.Element {
 
       case 'request-camera': {
         const { status } = await requestCameraPermission();
-        webviewRef.current?.injectJavaScript(
-          `window.dispatchEvent(new MessageEvent('message', { data: ${JSON.stringify(
-            {
-              type: 'camera-status',
-              payload: status,
-            },
-          )} }));`,
+        webviewRef.current?.postMessage(
+          JSON.stringify({
+            type: 'camera-status',
+            payload: status,
+          }),
         );
+
         break;
       }
 
